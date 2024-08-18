@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #000000, #003366);
+            color: #fff;
+        }
+        header {
+            background: linear-gradient(135deg, #000000, #003366);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+            opacity: 0;
+            transition: opacity 0.5s;
+            z-index: 1;
+        }
+        header:hover::before {
+            opacity: 1;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            transition: color 0.5s, transform 0.5s;
+        }
+        header:hover h1 {
+            color: #e0f7fa;
+            transform: scale(1.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to right, #000000, #003366);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #002244;
+            color: #e0f7fa;
+        }
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 1000px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            color: #333;
+        }
+        h2 {
+            margin-top: 0;
+            color: #003366;
+            text-align: center;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .about-content img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 150px;
+            height: 150px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .about-content img:hover {
+            transform: scale(1.1);
+        }
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skill, .project {
+            flex: 1 1 45%;
+            margin: 15px;
+            padding: 20px;
+            background: linear-gradient(to right, #e6f0ff, #ffffff);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .skill:hover, .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .project img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            background: linear-gradient(to right, #000000, #003366);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+        
+            <p>Hello! I'm Biswajit Sahoo, student of DD University,Keonjhar currently pursuing a BSc in Computer Science (3rd year). Alongside my studies, I work as a part-time Computer Instructor with a passion for teaching, exploring new technologies, editing, and designing. I enjoy sharing my knowledge with others and constantly strive to learn and grow in the field of technology.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills & Hobbies</h2>
+        <div class="skills">
+            <div class="skill">
+                <h3>Teaching</h3>
+                <p>Proficient in teaching various computer science topics and making complex concepts easy to understand for students.</p>
+            </div>
+            <div class="skill">
+                <h3>Exploring New Technologies</h3>
+                <p>Constantly learning and experimenting with the latest technologies and tools in the tech world.</p>
+            </div>
+            <div class="skill">
+                <h3>Editing & Designing</h3>
+                <p>Experienced in editing and designing with tools like Adobe Photoshop, Illustrator, and other design software.</p>
+            </div>
+            <div class="skill">
+                <h3>C++ Programming</h3>
+                <p>Skilled in developing software solutions using C++ programming language.</p>
+            </div>
+            <div class="skill">
+                <h3>Expert in MS Office</h3>
+                <p>Expertise in Microsoft Office suite, including Word, Excel, PowerPoint, and Access.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, you can reach me at:</p>
+        <p>Email: <a href="mailto:your.email@example.com">biswajit1366@gmail.com</a></p>
+        <p>Phone: +91 9337125501</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
